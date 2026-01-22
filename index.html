@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intisari Auto Cut - Tools Clipper No.1 Indonesia</title>
+    <meta name="description" content="Otomatisasi Video Clipping untuk Android & PC. Ubah video panjang jadi viral shorts dalam detik.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        termux: '#23ff00', // Warna Hijau Hacker Termux
+                        windows: '#00a4ef', // Warna Biru Windows
+                        darkbg: '#0f172a',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .neon-text {
+            text-shadow: 0 0 10px rgba(35, 255, 0, 0.5);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #23ff00, #00a4ef);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-950 text-white font-sans antialiased overflow-x-hidden">
+
+    <nav class="fixed w-full z-50 bg-gray-900/90 backdrop-blur border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold tracking-tighter">INTISARI <span class="text-termux">CLIPS</span></span>
+                </div>
+                <div class="hidden md:block">
+                    <a href="#produk" class="bg-white text-black px-4 py-2 rounded-full font-bold hover:bg-gray-200 transition">Lihat Produk</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0 opacity-20">
+            <div class="absolute top-10 left-10 w-72 h-72 bg-termux rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
+            <div class="absolute bottom-10 right-10 w-72 h-72 bg-windows rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-block px-4 py-1 rounded-full border border-gray-700 bg-gray-900 mb-6">
+                <span class="text-sm font-semibold text-gray-300">🚀 Batch Early Access Dibuka</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-black tracking-tight mb-6 leading-tight">
+                Stop Ngedit Manual.<br>
+                <span class="gradient-text">Biar AI & Script Yang Kerja.</span>
+            </h1>
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-400">
+                Ubah video 2 jam jadi puluhan klip viral dalam hitungan detik. 
+                Pilih senjatamu: <strong>Mobile (Termux)</strong> atau <strong>PC Ecosystem</strong>.
+            </p>
+            <div class="mt-10 flex justify-center gap-4">
+                <a href="#android" class="px-8 py-4 bg-termux text-black font-bold rounded-lg shadow-[0_0_20px_rgba(35,255,0,0.4)] hover:scale-105 transition">
+                    <i class="fab fa-android mr-2"></i> Versi Android
+                </a>
+                <a href="#windows" class="px-8 py-4 bg-windows text-white font-bold rounded-lg shadow-[0_0_20px_rgba(0,164,239,0.4)] hover:scale-105 transition">
+                    <i class="fab fa-windows mr-2"></i> Versi PC
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-16 bg-gray-900 border-y border-gray-800">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8">Masalah Utama Clipper Pemula & Pro</h2>
+            <div class="grid md:grid-cols-3 gap-6 text-left">
+                <div class="p-6 bg-gray-800 rounded-xl border border-gray-700">
+                    <div class="text-red-500 text-3xl mb-4"><i class="fas fa-clock"></i></div>
+                    <h3 class="font-bold text-lg mb-2">Waktu Terbuang</h3>
+                    <p class="text-gray-400 text-sm">Ngedit video 1 jam butuh waktu 3 jam cuma buat buang bagian diam (silent part).</p>
+                </div>
+                <div class="p-6 bg-gray-800 rounded-xl border border-gray-700">
+                    <div class="text-red-500 text-3xl mb-4"><i class="fas fa-cut"></i></div>
+                    <h3 class="font-bold text-lg mb-2">Potongan Kasar</h3>
+                    <p class="text-gray-400 text-sm">Hasil cut manual sering mepet, suara kepotong, transisi jadi jelek.</p>
+                </div>
+                <div class="p-6 bg-gray-800 rounded-xl border border-gray-700">
+                    <div class="text-red-500 text-3xl mb-4"><i class="fas fa-brain"></i></div>
+                    <h3 class="font-bold text-lg mb-2">Buntu Ide</h3>
+                    <p class="text-gray-400 text-sm">Bingung mau kasih judul apa biar FYP di TikTok/Reels.</p>
+                </div>
+            </div>
+            <p class="mt-10 text-xl font-semibold">Kami Punya Solusinya. Pilih Platform Anda:</p>
+        </div>
+    </section>
+
+    <div id="produk" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div id="android" class="grid lg:grid-cols-2 gap-12 items-center mb-32">
+            <div class="order-2 lg:order-1">
+                <div class="inline-block px-3 py-1 bg-termux/20 text-termux rounded text-sm font-bold mb-4 border border-termux/50">
+                    BEST SELLER • MOBILE
+                </div>
+                <h2 class="text-4xl font-bold mb-4">Intisari Auto-Cut <span class="text-termux">Android</span></h2>
+                <p class="text-gray-300 text-lg mb-6">
+                    Script Termux revolusioner yang menyulap HP Anda jadi mesin potong video. Ringan, cepat, dan bisa dikerjakan sambil rebahan.
+                </p>
+                
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-termux mt-1 mr-3"></i>
+                        <div>
+                            <strong class="block text-white">🛡️ Auto-Buffer +10 Detik</strong>
+                            <span class="text-gray-400 text-sm">Satu-satunya tool yang memberi jeda aman. Suara tidak putus, aman untuk transisi.</span>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-termux mt-1 mr-3"></i>
+                        <div>
+                            <strong class="block text-white">⚡ Bulk Input Masal</strong>
+                            <span class="text-gray-400 text-sm">Copy-paste timestamp, biarkan script memotong puluhan klip sekaligus.</span>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-termux mt-1 mr-3"></i>
+                        <div>
+                            <strong class="block text-white">📥 All-in-One Downloader & Gallery</strong>
+                            <span class="text-gray-400 text-sm">Download langsung YT, IG, FB, TikTok atau ambil dari Galeri HP. Tanpa pindah aplikasi.</span>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-termux mt-1 mr-3"></i>
+                        <div>
+                            <strong class="block text-white">🎥 Auto Reframe 9:16 (Smart Focus)</strong>
+                            <span class="text-gray-400 text-sm">Otomatis ubah landscape jadi portrait. Support mode Podcast Solo atau Berdua (Split Screen).</span>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="p-6 bg-gray-800 rounded-xl border border-gray-700">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-gray-400">Harga Promo</span>
+                        <div class="text-right">
+                            <span class="block text-sm line-through text-red-500">Rp 100.000</span>
+                            <span class="text-3xl font-bold text-white">Rp 50.000</span>
+                        </div>
+                    </div>
+                    <a href="http://lynk.id/faldiintisariclipper/eg9q0n3jwk11/checkout" class="block w-full text-center py-4 bg-termux text-black font-bold text-lg rounded hover:bg-green-400 transition transform hover:-translate-y-1">
+                        🚀 AMBIL VERSI ANDROID
+                    </a>
+                    <p class="text-xs text-center mt-3 text-gray-500">Lifetime Access • Gratis Update Selamanya</p>
+                </div>
+            </div>
+            <div class="order-1 lg:order-2 relative">
+                <div class="relative rounded-2xl bg-gray-900 border border-gray-700 p-2 shadow-2xl rotate-1">
+                    <div class="absolute inset-0 bg-termux opacity-5 blur-2xl rounded-2xl"></div>
+                    <div class="bg-black rounded-xl p-4 font-mono text-xs md:text-sm text-green-500 h-[400px] overflow-hidden leading-relaxed">
+                        <p>$ pkg install ffmpeg</p>
+                        <p>$ git clone intisari-autocut</p>
+                        <p class="animate-pulse">_ Menginisialisasi Auto-Cut Engine...</p>
+                        <br>
+                        <p>> [INFO] Mendeteksi Link Youtube...</p>
+                        <p>> [PROCESS] Downloading 1080p...</p>
+                        <p>> [AI] Menganalisa Timestamp...</p>
+                        <p>> [CUTTING] Clip 1.. Done (Buffer +10s)</p>
+                        <p>> [CUTTING] Clip 2.. Done (Buffer +10s)</p>
+                        <p>> [CUTTING] Clip 3.. Done (Buffer +10s)</p>
+                        <br>
+                        <p class="text-white bg-green-900 inline-block px-1">SUCCESS: 20 Clips Created in 45 Seconds.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="border-gray-800 mb-32">
+
+        <div id="windows" class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="relative">
+                 <div class="relative rounded-2xl bg-gray-800 border border-gray-700 p-2 shadow-2xl -rotate-1">
+                    <div class="absolute inset-0 bg-windows opacity-10 blur-2xl rounded-2xl"></div>
+                    <img src="https://images.unsplash.com/photo-1664575602276-acd073f104c1?q=80&w=2070&auto=format&fit=crop" alt="Dashboard Notion" class="rounded-xl opacity-80 grayscale hover:grayscale-0 transition duration-500">
+                    <div class="absolute bottom-4 left-4 bg-black/80 backdrop-blur px-4 py-2 rounded border border-gray-600">
+                        <p class="text-white font-bold text-sm">Dashboard Intisari Pro</p>
+                        <p class="text-windows text-xs">Connected to Gemini AI</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="inline-block px-3 py-1 bg-windows/20 text-windows rounded text-sm font-bold mb-4 border border-windows/50">
+                    PROFESSIONAL • ECOSYSTEM
+                </div>
+                <h2 class="text-4xl font-bold mb-4">Intisari Clips <span class="text-windows">Ecosystem (PC)</span></h2>
+                <p class="text-gray-300 text-lg mb-6">
+                    Bukan sekadar alat potong. Ini adalah Command Center. Gabungan kekuatan Notion AI untuk manajemen dan Script Windows untuk eksekusi.
+                </p>
+
+                <div class="space-y-6 mb-8">
+                    <div class="flex gap-4">
+                        <div class="bg-gray-800 p-3 rounded-lg h-fit"><i class="fas fa-brain text-windows text-xl"></i></div>
+                        <div>
+                            <h4 class="font-bold text-white">THE BRAIN: Notion AI Command Center</h4>
+                            <p class="text-sm text-gray-400">Pusat komando. AI otomatis buatkan Hook & Caption viral. Kalender konten terintegrasi agar postingan konsisten.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="bg-gray-800 p-3 rounded-lg h-fit"><i class="fas fa-bolt text-yellow-400 text-xl"></i></div>
+                        <div>
+                            <h4 class="font-bold text-white">THE ENGINE: Remote Auto-Cut</h4>
+                            <p class="text-sm text-gray-400">Jalankan di PC, kontrol dari mana saja. Otomatisasi FFmpeg memotong presisi tanpa membuka software edit berat.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="bg-gray-800 p-3 rounded-lg h-fit"><i class="fas fa-user-secret text-red-500 text-xl"></i></div>
+                        <div>
+                            <h4 class="font-bold text-white">SECRET WEAPON: Exclusive Mentoring</h4>
+                            <p class="text-sm text-gray-400">Akses Blueprint Viral & Cuan. Diajarkan cara monetisasinya, bukan cuma cara pakainya.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-6 bg-gray-800 rounded-xl border border-gray-700 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-bl">LIMITED STOCK</div>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-gray-400">Harga Promo Bundle</span>
+                        <div class="text-right">
+                            <span class="block text-sm line-through text-red-500">Rp 100.000</span>
+                            <span class="text-3xl font-bold text-white">Rp 80.000</span>
+                        </div>
+                    </div>
+                    <a href="http://lynk.id/faldiintisariclipper/zkpy4eyp117e/checkout" class="block w-full text-center py-4 bg-windows text-white font-bold text-lg rounded hover:bg-blue-600 transition transform hover:-translate-y-1">
+                        🖥️ AMBIL VERSI PC / WINDOWS
+                    </a>
+                    <p class="text-xs text-center mt-3 text-gray-500">Termasuk Template Notion + Grup VIP Mentoring</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="py-16 bg-gradient-to-br from-gray-900 to-black text-center border-y border-gray-800">
+        <div class="max-w-4xl mx-auto px-4">
+            <h3 class="text-2xl font-bold mb-6">🎁 Apa yang Anda Dapatkan di Paket Pembelian?</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="glass-card p-4 rounded-lg">
+                    <i class="fas fa-code text-3xl mb-2 text-gray-400"></i>
+                    <p class="font-semibold text-sm">Full Script Auto-Cut</p>
+                </div>
+                <div class="glass-card p-4 rounded-lg">
+                    <i class="fas fa-users text-3xl mb-2 text-gray-400"></i>
+                    <p class="font-semibold text-sm">Akses Grup Support</p>
+                </div>
+                <div class="glass-card p-4 rounded-lg">
+                    <i class="fas fa-video text-3xl mb-2 text-gray-400"></i>
+                    <p class="font-semibold text-sm">Live Mentoring (Sabtu)</p>
+                </div>
+                <div class="glass-card p-4 rounded-lg">
+                    <i class="fas fa-infinity text-3xl mb-2 text-gray-400"></i>
+                    <p class="font-semibold text-sm">Free Lifetime Update</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center text-gray-500 text-sm">
+        <p class="mb-2">Developed by <strong>Faldi Intisari Clipper</strong></p>
+        <p class="mb-4">Bangga Buatan Indonesia 🇮🇩</p>
+        <div class="flex justify-center gap-4">
+            <a href="#" class="hover:text-white transition"><i class="fab fa-whatsapp"></i> Kontak Support</a>
+            <a href="#" class="hover:text-white transition"><i class="fab fa-tiktok"></i> TikTok</a>
+        </div>
+        <p class="mt-8 opacity-50">&copy; 2026 Intisari Auto-Cut Tools. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
